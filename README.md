@@ -2,11 +2,6 @@
 
 This is my little Arch Repo with all of the Arch Linux packages I work on. They are meant to work on Arch Linux, but they also work on other Arch forks and derivatives.
 
-## Download
-
-* [GitHub Releases](https://github.com/justalemon/Arch/releases)
-* [GitHub Actions](https://github.com/justalemon/Arch/actions) (experimental versions)
-
 ## Installation
 
 Add the following lines to your `/etc/pacman.conf`:
