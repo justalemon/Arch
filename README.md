@@ -9,7 +9,13 @@ This is my little Arch Repo with all of the Arch Linux packages I work on. They 
 
 ## Installation
 
-TBD
+Add the following lines to your `/etc/pacman.conf`:
+
+```ini
+[lemon]
+SigLevel = Optional DatabaseOptional
+Server = https://github.com/justalemon/Arch/raw/master/$arch
+```
 
 ## Usage
 
