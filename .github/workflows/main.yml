@@ -14,5 +14,6 @@ jobs:
     container: archlinux
     steps:
       - uses: actions/checkout@v3
+      - run: ls /github/workspace
       - run: pacman -Syu --noconfirm git python python-requests
       - run: bash build.sh push
