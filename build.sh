@@ -13,6 +13,11 @@ for a in "${arch[@]}"; do
     repo-add -n -R "$a/lemon.db.tar.gz" $a/*.pkg.tar.zst
     # shellcheck disable=SC2086
     rm $a/*.tar.gz.old
+
+    rm $a/lemon.db
+    rm $a/lemon.files
+    cp $a/lemon.db.tar.gz $a/lemon.db
+    cp $a/lemon.files.tar.gz $a/lemon.files
 done
 echo "Finished update of Database(s)"
 
