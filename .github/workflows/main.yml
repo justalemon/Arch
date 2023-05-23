@@ -13,7 +13,7 @@ jobs:
     runs-on: ubuntu-22.04
     container: archlinux
     steps:
+      - run: pacman -Syu --noconfirm git python python-requests
       - uses: actions/checkout@v3
       - run: ls -aR
-      - run: pacman -Syu --noconfirm git python python-requests
       - run: bash build.sh push
