@@ -16,4 +16,5 @@ jobs:
       - run: pacman -Syu --noconfirm git python python-requests
       - uses: actions/checkout@v3
       - run: ls -aR
+      - run: git config --global --add safe.directory '*'
       - run: bash build.sh push
