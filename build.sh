@@ -24,6 +24,7 @@ if [ "$1" == "push" ]; then
         git config --global user.email "actions@github.com"
     fi
 
+    git add *
     git commit -m "Updated Package List"
     git push
 fi
