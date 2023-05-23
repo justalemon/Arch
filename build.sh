@@ -18,8 +18,12 @@ echo "Finished update of Database(s)"
 
 if [ "$1" == "push" ]; then
     echo "Pushing the changes to the main repo"
-    git config --global user.name "GitHub Actions"
-    git config --global user.email "actions@github.com"
+
+    if [ "$CI" == "true" ]; then
+        git config --global user.name "GitHub Actions"
+        git config --global user.email "actions@github.com"
+    fi
+
     git commit -m "Updated Package List"
     git push
 fi
