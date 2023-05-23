@@ -15,3 +15,11 @@ for a in "${arch[@]}"; do
     rm $a/*.tar.gz.old
 done
 echo "Finished update of Database(s)"
+
+if [ "$1" == "push" ]; then
+    echo "Pushing the changes to the main repo"
+    git config --global user.name "GitHub Actions"
+    git config --global user.email "actions@github.com"
+    git commit -m "Updated Package List"
+    git push
+fi
